@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* paleta de  cores 
+| Cor            | Hex         | Uso               |
+| -------------| ----------- | ------------------- |
+Verde floresta | **#23301F** | Fundo, barra lateral|
+Verde oliva | **#5F6C3C** | Botões secundários     |
+Verde-musgo claro| **#8A8C52** | Hover e detalhes  |
+Cinza azulado| **#73808A** | Textos secundários    |
+Cinza escuro | **#3D4548** | Cards e inputs        |
+Dourado da montanha| **#D6B85C** | Botão principal e destaque |
+*/
+
+/* propriedade: var(--nome-da-variavel); 
+Ex:
+color: var(--white);
+    background-color: var(--forest);
+    border-color: var(--cloud); */
+
+ :root {
+    --forest: #23301F;
+    --olive: #5F6C3C;
+    --moss: #8A8C52;
+    --storm: #3D4548;
+    --cloud: #73808A;
+    --gold: #D6B85C;
+
+    --white: #F4F4F2;
+    --gray: #D8D8D8;
+    --black: #121212;
+}
