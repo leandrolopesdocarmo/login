@@ -79,7 +79,7 @@ section#login{
 
 section#login > div#imagem{
     display: block;
-    background: #3D4548 url(../../imagem/tela-login.jpg) no-repeat;
+    background: #3D4548 url(../imagem/tela-login.jpg) no-repeat;
     height:200px;
     background-size: cover;
     background-position: left bottom;
