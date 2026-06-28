@@ -1,23 +1,10 @@
 @charset "UTF-8";
 
-/* paleta de  cores 
-| Cor            | Hex         | Uso               |
-| -------------| ----------- | ------------------- |
-Verde floresta | **#23301F** | Fundo, barra lateral|
-Verde oliva | **#5F6C3C** | Botões secundários     |
-Verde-musgo claro| **#8A8C52** | Hover e detalhes  |
-Cinza azulado| **#73808A** | Textos secundários    |
-Cinza escuro | **#3D4548** | Cards e inputs        |
-Dourado da montanha| **#D6B85C** | Botão principal e destaque |
-*/
+/* ==========================
+   PALETA DE CORES
+========================== */
 
-/* propriedade: var(--nome-da-variavel); 
-Ex:
-color: var(--white);
-    background-color: var(--forest);
-    border-color: var(--cloud); */
-
- :root {
+:root {
     --forest: #23301F;
     --olive: #5F6C3C;
     --moss: #8A8C52;
@@ -30,10 +17,15 @@ color: var(--white);
     --black: #121212;
 }
 
+/* ==========================
+   FONTES
+========================== */
+
 @font-face {
     font-family: "poppinsex";
     src: url(../fonts/Poppins-ExtraBold.ttf);
 }
+
 @font-face {
     font-family: "poppinssem";
     src: url(../fonts/Poppins-SemiBold.ttf);
@@ -44,60 +36,230 @@ color: var(--white);
     src: url(../fonts/Poppins-Regular.ttf);
 }
 
+/* ==========================
+   RESET
+========================== */
+
 *{
-    font-family: "poppinsex";
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body, html{
-    background-color: var( --forest);
+html,
+body{
     width: 100%;
     height: 100vh;
+
+    background-color: var(--forest);
+
+    font-family: "poppinsreg";
 }
 
 main{
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
+
+/* ==========================
+   LOGIN
+========================== */
 
 section#login{
     position: absolute;
+
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%);
 
-    background-color: var(--olive);
     width: 250px;
-    height: 500px;
+    min-height: 515px;
+
+    background-color: var(--olive);
+
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px var(--moss);
 
-    transition: width .1s, height .1s;
-    transition-timing-function: ease;
+    box-shadow: 0 0 10px var(--moss);
+
+    transition: width .3s, height .3s;
 }
 
 section#login > div#imagem{
     display: block;
-    background: #3D4548 url(../imagem/tela-login.jpg) no-repeat;
-    height:150px;
+
+    height: 150px;
+
+    background: var(--forest)
+        url(../imagem/tela-login.jpg)
+        no-repeat;
+
     background-size: cover;
-    background-position: left bottom;
+    background-position: center center;
 }
 
 section#login > div#formulario{
-    padding: 10px;
     display: block;
+    padding: 10px;
 }
 
-div#formulario > h1 {
+div#formulario > h1{
     text-align: center;
     margin-bottom: 10px;
+
+    font-family: "poppinsex";
 }
 
-div#formulario > p {
-    font-size: 0.8em;
+div#formulario > p{
+    margin-bottom: 10px;
+
+    font-family: "poppinsreg";
+    font-size: .85em;
+    line-height: 1.4em;
+}
+
+/* ==========================
+   CAMPOS
+========================== */
+
+form > .campo{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    margin: 6px 0;
+
+    background-color: var(--white);
+
+    border-radius: 8px;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    display: inline-block;
+
+    width: 40px;
+
+    padding: 6px;
+
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+div.campo > input{
+
+    width: calc(100% - 45px);
+    height: 100%;
+
+    padding: 4px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 8px;
+
+    background-color: var(--white);
+
+    font-family: "poppinsreg";
+    font-size: 1em;
+
+    transform: translateY(-3px);
+}
+
+div.campo > input:focus{
+    background-color: var(--gold);
+}
+
+/* ==========================
+   BOTÃO ENTRAR
+========================== */
+
+form > input[type="submit"]{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--gold);
+    color: var(--black);
+
+    font-family: "poppinssem";
+    font-size: 1em;
+
+    cursor: pointer;
+
+    transition: background-color .3s;
+}
+
+form > input[type="submit"]:hover{
+    background-color: var(--moss);
+}
+
+/* ==========================
+   BOTÃO ESQUECI A SENHA
+========================== */
+
+form > a.botao{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+
+    margin-top: 8px;
+    padding: 8px;
+
+    border: 1px solid var(--forest);
+    border-radius: 8px;
+
+    background-color: var(--white);
+
+    color: var(--black);
+
+    text-align: center;
+    text-decoration: none;
+
+    font-family: "poppinssem";
+    font-size: 1em;
+
+    transition: background-color .3s,
+                color .3s;
+}
+
+form > a.botao:hover{
+    background-color: var(--gold);
+}
+
+form > a.botao > span{
+    font-size: .9em;
+    vertical-align: middle;
+}
+
+/* ==========================
+   PLACEHOLDER
+========================== */
+
+input::placeholder{
+    color: #666;
+    font-family: "poppinsreg";
+}
+
+/* ==========================
+   FOCUS DOS BOTÕES
+========================== */
+
+input[type="submit"]:focus,
+a.botao:focus{
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
 }

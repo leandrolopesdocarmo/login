@@ -1,47 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/media-query.css">
+
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
+
 <body>
+
     <main>
+
         <section id="login">
+
             <div id="imagem">
-               <!-- Aqui a imagem está no css -->
+                <!-- A imagem é carregada pelo CSS -->
             </div>
+
             <div id="formulario">
+
                 <h1>Login</h1>
-                <p>Seja bem-vindo(a) novamente: Faça login para acessar sua conta e poder fazer as configurações no seu ambiente</p>
+
+                <p>
+                    Seja bem-vindo(a) novamente! Faça login para acessar sua conta
+                    e poder realizar as configurações do seu ambiente.
+                </p>
+
                 <form action="login.php" method="post" autocomplete="on">
+
                     <div class="campo">
+
+                        <label for="ilogin">Usuário</label>
+
                         <span class="material-symbols-outlined">
                             person
-                            </span>
-                        <input type="email" name="login" id="ilogin" placeholder="ex:usuário@gmail.com" autocomplete="email" required maxlength="30">
-                         <label for="ilogin">Usuário</label>
+                        </span>
+
+                        <input
+                            type="email"
+                            name="login"
+                            id="ilogin"
+                            placeholder="ex:usuario@gmail.com"
+                            autocomplete="email"
+                            maxlength="30"
+                            required>
+
                     </div>
+
                     <div class="campo">
+
+                        <label for="isenha">Senha</label>
+
                         <span class="material-symbols-outlined">
                             vpn_key
-                            </span>
-                        <input type="password" name="senha" id="isenha" placeholder="Sua senha" autocomplete="current-password" required minlength="6" maxlength="12">
-                         <label for="isenha">Senha</label>
-                    </div>
-                    <input type="submit" value="Entrar">
-                    <span class="material-symbols-outlined">
-                        mail
                         </span>
-                    <a href="esqueci.html">Esqueci a senha</a>
-                    
+
+                        <input
+                            type="password"
+                            name="senha"
+                            id="isenha"
+                            placeholder="Sua senha"
+                            autocomplete="current-password"
+                            minlength="6"
+                            maxlength="12"
+                            required>
+
+                    </div>
+
+                    <input type="submit" value="Entrar">
+
+                    <a href="esqueci.html" class="botao">
+
+                        Esqueci a senha
+
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+
+                    </a>
+
                 </form>
+
             </div>
+
         </section>
+
     </main>
+
 </body>
+
 </html>
