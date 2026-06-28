@@ -83,7 +83,7 @@ section#login{
 section#login > div#imagem{
     display: block;
     background: #3D4548 url(../imagem/tela-login.jpg) no-repeat;
-    height:200px;
+    height:150px;
     background-size: cover;
     background-position: left bottom;
 }
@@ -91,4 +91,13 @@ section#login > div#imagem{
 section#login > div#formulario{
     padding: 10px;
     display: block;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
 }
